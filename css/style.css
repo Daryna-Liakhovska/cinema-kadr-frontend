@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f6;
+  color: #1d1d24;
+}
+
+.header {
+  padding: 24px 16px;
+  background: #1d1d24;
+  color: #ffffff;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 4px;
+}
+
+.header p {
+  margin: 0;
+  color: #c8c8d0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filters input,
+.filters select,
+.filters button {
+  padding: 8px 12px;
+  border: 1px solid #c8c8d0;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.filters input {
+  flex: 1 1 240px;
+}
+
+.filters button {
+  background: #b3261e;
+  border-color: #b3261e;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.status {
+  color: #5a5a66;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.movie {
+  padding: 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.movie h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.movie p {
+  margin: 4px 0;
+}
+
+.genres {
+  color: #5a5a66;
+  font-size: 14px;
+}

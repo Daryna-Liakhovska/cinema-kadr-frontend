@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Афіша кінотеатру «Кадр»: фільми, жанри та режисери." />
+        <title>Кінотеатр «Кадр»</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1>Кінотеатр «Кадр»</h1>
+            <p>Афіша фільмів</p>
+        </header>
+        <main class="container">
+            <form id="filters" class="filters">
+                <input id="search" type="search" placeholder="Пошук за назвою або режисером" />
+                <select id="genre">
+                    <option value="">Усі жанри</option>
+                </select>
+                <button type="submit">Знайти</button>
+            </form>
+            <p id="status" class="status">Завантаження...</p>
+            <ul id="movies" class="movies">
+            </ul>
+        </main>
+        <script src="js/config.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
