@@ -3,6 +3,8 @@ const statusText = document.getElementById("status");
 const filtersForm = document.getElementById("filters");
 const searchInput = document.getElementById("search");
 const genreSelect = document.getElementById("genre");
+const directorsList = document.getElementById("directors");
+const directorsStatus = document.getElementById("directors-status");
 
 async function fetchJson(path) {
   const response = await fetch(`${API_BASE_URL}${path}`);
@@ -64,6 +66,25 @@ async function loadMovies() {
   }
 }
 
+function renderDirector(director) {
+  const item = document.createElement("li");
+  item.className = "director";
+  item.textContent = `${director.first_name} ${director.last_name}`;
+  return item;
+}
+
+async function loadDirectors() {
+  try {
+    const data = await fetchJson("/directors?ordering=last_name&page_size=100");
+    directorsStatus.textContent = data.count ?
+      `Режисерів: ${data.count}` :
+      "Режисерів поки немає.";
+    directorsList.append(...data.results.map(renderDirector));
+  } catch (error) {
+    directorsStatus.textContent = `Не вдалося завантажити режисерів: ${error.message}`;
+  }
+}
+
 filtersForm.addEventListener("submit", (event) => {
   event.preventDefault();
   loadMovies();
@@ -71,3 +92,4 @@ filtersForm.addEventListener("submit", (event) => {
 
 loadGenres().catch(() => {});
 loadMovies();
+loadDirectors();

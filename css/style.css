@@ -91,3 +91,23 @@ body {
   color: #5a5a66;
   font-size: 14px;
 }
+
+.section-title {
+  margin: 32px 0 8px;
+}
+
+.directors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.director {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
