@@ -111,3 +111,95 @@ body {
   background: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.nav a {
+  color: #ffffff;
+}
+
+.nav-user {
+  font-weight: bold;
+}
+
+.nav button,
+.nav .nav-button {
+  padding: 6px 12px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.narrow {
+  max-width: 480px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form input,
+.form button {
+  padding: 8px 12px;
+  border: 1px solid #c8c8d0;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form button {
+  background: #b3261e;
+  border-color: #b3261e;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.inline-form {
+  flex-direction: row;
+}
+
+.inline-form input {
+  flex: 1;
+}
+
+.field-error,
+.form-error {
+  color: #b3261e;
+  font-size: 14px;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 16px;
+}
+
+.profile dt {
+  font-weight: bold;
+}
+
+.profile dd {
+  margin: 0;
+}
+
+.admin-panel {
+  margin-top: 32px;
+}

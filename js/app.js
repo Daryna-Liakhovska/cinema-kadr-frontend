@@ -93,3 +93,4 @@ filtersForm.addEventListener("submit", (event) => {
 loadGenres().catch(() => {});
 loadMovies();
 loadDirectors();
+renderNav();

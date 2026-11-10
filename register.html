@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Реєстрація на сайті кінотеатру «Кадр»." />
+        <title>Реєстрація — Кінотеатр «Кадр»</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1>Кінотеатр «Кадр»</h1>
+            <nav id="nav" class="nav">
+            </nav>
+        </header>
+        <main class="container narrow">
+            <h2>Реєстрація</h2>
+            <form id="register-form" class="form" novalidate>
+                <label>
+                    Username *
+                    <input name="username" maxlength="150" autocomplete="username" required />
+                    <span class="field-error" data-error-for="username"></span>
+                </label>
+                <label>
+                    Email *
+                    <input name="email"
+                           type="email"
+                           maxlength="254"
+                           autocomplete="email"
+                           required />
+                    <span class="field-error" data-error-for="email"></span>
+                </label>
+                <label>
+                    Ім'я
+                    <input name="first_name" maxlength="150" autocomplete="given-name" />
+                    <span class="field-error" data-error-for="first_name"></span>
+                </label>
+                <label>
+                    Прізвище
+                    <input name="last_name" maxlength="150" autocomplete="family-name" />
+                    <span class="field-error" data-error-for="last_name"></span>
+                </label>
+                <label>
+                    Пароль *
+                    <input name="password"
+                           type="password"
+                           maxlength="128"
+                           autocomplete="new-password"
+                           required />
+                    <span class="field-error" data-error-for="password"></span>
+                </label>
+                <label>
+                    Повторіть пароль *
+                    <input name="password_confirm"
+                           type="password"
+                           maxlength="128"
+                           autocomplete="new-password"
+                           required />
+                    <span class="field-error" data-error-for="password_confirm"></span>
+                </label>
+                <p id="form-error" class="form-error"></p>
+                <button type="submit">Зареєструватися</button>
+            </form>
+            <p>
+                Уже є акаунт? <a href="login.html">Увійти</a>
+            </p>
+        </main>
+        <script src="js/config.js"></script>
+        <script src="js/auth.js"></script>
+        <script src="js/register.js"></script>
+    </body>
+</html>
