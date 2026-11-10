@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Вхід на сайт кінотеатру «Кадр»." />
+        <title>Вхід — Кінотеатр «Кадр»</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1>Кінотеатр «Кадр»</h1>
+            <nav id="nav" class="nav">
+            </nav>
+        </header>
+        <main class="container narrow">
+            <h2>Вхід</h2>
+            <p id="login-message" class="status"></p>
+            <form id="login-form" class="form" novalidate>
+                <label>
+                    Username
+                    <input name="username" autocomplete="username" required />
+                </label>
+                <label>
+                    Пароль
+                    <input name="password"
+                           type="password"
+                           autocomplete="current-password"
+                           required />
+                </label>
+                <p id="form-error" class="form-error"></p>
+                <button type="submit">Увійти</button>
+            </form>
+            <p>
+                Ще немає акаунта? <a href="register.html">Зареєструватися</a>
+            </p>
+        </main>
+        <script src="js/config.js"></script>
+        <script src="js/auth.js"></script>
+        <script src="js/login.js"></script>
+    </body>
+</html>
